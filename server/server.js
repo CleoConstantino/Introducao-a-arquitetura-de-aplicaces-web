@@ -1,10 +1,8 @@
-const http = require('http');
+const express = require('express');
+const server = express();
 
-const hostname = '127.0.0.1';
-const port = 3000;
-
-const server = http.createServer((_,res) => {
-    res.end('Hello Node');
+server.get('/', (_,res) => {
+    res.end('Hello Express');
 });
 
 server.listen(3000, '127.0.0.1');
