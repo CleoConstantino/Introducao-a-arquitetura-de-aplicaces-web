@@ -76,7 +76,7 @@ NodeJS: realizado instalação do NodeJS 16.16.0, e o VSCode.
 - git commit -m "texto" = comitar uma alteração 
 - git log --oneline = verificar o retorno do log
 
-**Configuração do Express:** o Express vai rodas "em cima" do Node, vamos utilizar o npm para instalar o Express.
+**Configuração do Express:** o Express vai rodar "em cima" do Node, vamos utilizar o npm para instalar o Express.
 
 npm init -y = esta 'flag' (-y) vai dar ok para toda a instalação
 rm package.jason = remove o arquivo
