@@ -66,12 +66,21 @@ NodeJS: realizado instalação do NodeJS 16.16.0, e o VSCode.
     
     server.listen(3000, '127.0.0.1');
 
-**Atalhos utilizados no terminal:**
-abrir a pasta escolhida = cd + nome da pasta = exemplo -> cd server
-para voltar a pasta anterior = cd..
-para executar a aplicação = node server.js
-verificar a versão do node = node -v
-git init = para inicializar o git
-git status = para verifcar o status das modificações
-git commit -m "texto" = comitar uma alteração
-git log --oneline = verificar o retorno do log
+**Atalhos utilizados no terminal:** 
+- abrir a pasta escolhida = cd + nome da pasta = exemplo -> cd server 
+- para voltar a pasta anterior = cd.. 
+- para executar a aplicação = node server.js 
+- verificar a versão do node = node -v 
+- git init = para inicializar o git 
+- git status = para verifcar o status das modificações 
+- git commit -m "texto" = comitar uma alteração 
+- git log --oneline = verificar o retorno do log
+
+**Configuração do Express:** o Express vai rodas "em cima" do Node, vamos utilizar o npm para instalar o Express.
+
+npm init -y = esta 'flag' (-y) vai dar ok para toda a instalação
+rm package.jason = remove o arquivo
+ls = mostra os arquivos dentro da pasta
+npm install express - vai instalar os pacotes do express
+
+**Configurar o Drive no Mongo:**
