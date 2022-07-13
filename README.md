@@ -92,18 +92,14 @@ O driver oficial do MongoDB Node.js permite que aplicativos Node.js se conectem 
     npm install mongodb
 Fazer o login na conta do [MongoDB](https://account.mongodb.com/account/login) e clicar em conect, selecionar a conexãocom aplicação.
 
-- Criar um arquivo mongo.js e incluir o código abaixo:
+**Criar um arquivo mongo.js e incluir o código abaixo:**
 
-const { MongoClient, ServerApiVersion } = require('mongodb');
-
-const  uri = "mongodb+srv://database_user:iuGBR83GFk3eGGLY@firstcluster.ynxjxrm.mongodb.net/?retryWrites=true&w=majority";
-
-  
-
-const  client = new  MongoClient(uri, { useNewUrlParser:  true, useUnifiedTopology:  true, serverApi:  ServerApiVersion.v1 });
-
-  
-
+    const { MongoClient, ServerApiVersion } = require('mongodb');
+    
+    const uri = "mongodb+srv://database_user:[iuGBR83GFk3eGGLY@firstcluster.ynxjxrm.mongodb.net](mailto:iuGBR83GFk3eGGLY@firstcluster.ynxjxrm.mongodb.net)/?retryWrites=true&w=majority";
+    
+    const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+    
     client.connect(err  => {
     
     const  collection = client.db("test").collection("devices");
@@ -125,4 +121,3 @@ const  client = new  MongoClient(uri, { useNewUrlParser:  true, useUnifiedTopolo
     )
     
     });
-
