@@ -84,3 +84,45 @@ NodeJS: realizado instalação do NodeJS 16.16.0, e o VSCode.
 - npm install express - vai instalar os pacotes do express
 
 **Configurar o Drive no Mongo:**
+Por padrão o Node não vem nada configurado para se conectar com banco de dados Mongo, existem ferramentas prontas para fazermos essa conexão.
+O driver oficial do MongoDB Node.js permite que aplicativos Node.js se conectem ao MongoDB e trabalhem com dados. O driver possui uma API assíncrona que permite interagir com o MongoDB usando Promises ou por meio de callbacks tradicionais - [site oficial](https://mongodb.github.io/node-mongodb-native/).
+
+**Executar o comando:**
+
+    npm install mongodb
+Fazer o login na conta do [MongoDB](https://account.mongodb.com/account/login) e clicar em conect, selecionar a conexãocom aplicação.
+
+- Criar um arquivo mongo.js e incluir o código abaixo:
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+
+const  uri = "mongodb+srv://database_user:iuGBR83GFk3eGGLY@firstcluster.ynxjxrm.mongodb.net/?retryWrites=true&w=majority";
+
+  
+
+const  client = new  MongoClient(uri, { useNewUrlParser:  true, useUnifiedTopology:  true, serverApi:  ServerApiVersion.v1 });
+
+  
+
+    client.connect(err  => {
+    
+    const  collection = client.db("test").collection("devices");
+    
+    collection.insertOne(
+    
+    {
+    
+    greeting:  'Hello Mongo',
+    
+    },
+    
+    () => {
+    
+    client.close()
+    
+    }
+    
+    )
+    
+    });
+
