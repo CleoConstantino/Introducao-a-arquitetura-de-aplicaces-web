@@ -155,5 +155,7 @@ Alterar a pasta App.js:
 Esta aplicação utiliza uma arquitetura em camadas, divida em: *Client, Server, Database.*
 
 **Client:** camada de FrontEnd, parte que vai rodar no navegador do usuário, vai ver e interagir com nossa aplicação.
+
 **Server:** camada de servidor, camada de BackEnd, lógica de negócio, trabalhar com dados, ter regras de negócio e responável por conectar com o banco de dados.
+
 **Database:** camada de banco de dados.
