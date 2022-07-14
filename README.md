@@ -94,30 +94,20 @@ Fazer o login na conta do [MongoDB](https://account.mongodb.com/account/login) e
 
 **Criar um arquivo mongo.js e incluir o código abaixo:**
 
-    const { MongoClient, ServerApiVersion } = require('mongodb');
     
-    const uri = "mongodb+srv://database_user:[iuGBR83GFk3eGGLY@firstcluster.ynxjxrm.mongodb.net](mailto:iuGBR83GFk3eGGLY@firstcluster.ynxjxrm.mongodb.net)/?retryWrites=true&w=majority";
-    
-    const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-    
-    client.connect(err  => {
-    
-    const  collection = client.db("test").collection("devices");
-    
-    collection.insertOne(
-    
-    {
-    
-    greeting:  'Hello Mongo',
-    
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://database_user:iuGBR83GFk3eGGLY@firstcluster.ynxjxrm.mongodb.net/?retryWrites=true&w=majority";
+
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  collection.findOne().then(
+    (item) => {
+      console.log(item.greeting)
     },
-    
     () => {
-    
-    client.close()
-    
+      client.close()
     }
-    
-    )
-    
-    });
+  )  
+});
