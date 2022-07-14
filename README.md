@@ -92,22 +92,62 @@ O driver oficial do MongoDB Node.js permite que aplicativos Node.js se conectem 
     npm install mongodb
 Fazer o login na conta do [MongoDB](https://account.mongodb.com/account/login) e clicar em conect, selecionar a conexãocom aplicação.
 
-**Criar um arquivo mongo.js e incluir o código abaixo:**
+**Criar um arquivo mongo.js e incluir o código abaixo:*
+  
 
+    const { MongoClient, ServerApiVersion } = require('mongodb');
     
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://database_user:iuGBR83GFk3eGGLY@firstcluster.ynxjxrm.mongodb.net/?retryWrites=true&w=majority";
-
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  collection.findOne().then(
+    const  uri = "mongodb+srv://database_user:iuGBR83GFk3eGGLY@firstcluster.ynxjxrm.mongodb.net/?retryWrites=true&w=majority";    
+    
+    const  client = new  MongoClient(uri, { useNewUrlParser:  true, useUnifiedTopology:  true, serverApi:  ServerApiVersion.v1 });
+    
+      
+    
+    client.connect(err  => {
+    
+    const  collection = client.db("test").collection("devices");
+    
+    collection.findOne().then(
+    
     (item) => {
-      console.log(item.greeting)
+    
+    console.log(item.greeting)
+    
     },
+    
     () => {
-      client.close()
+    
+    client.close()
+    
     }
-  )  
-});
+    
+    )
+    
+    });
+
+**Configurando o React:**
+
+[Site da documentação.](https://pt-br.reactjs.org/docs/create-a-new-react-app.html)
+
+Executar o comando:
+
+    npx create-react-app my-app
+    cd my-app
+    npm start
+
+Alterar a pasta App.js:
+
+    import  logo  from  './logo.svg';
+    import  './App.css';
+ 
+    function  App() {
+	    return (    
+			<div  className="App">
+			    <header  className="App-header">
+				    <img  src={logo}  className="App-logo"  alt="logo"  />
+				    <p>Hello React</p>
+			    </header>
+		    </div>
+	    );
+	}
+    export  default  App;
