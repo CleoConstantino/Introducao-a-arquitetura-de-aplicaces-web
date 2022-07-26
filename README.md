@@ -1,5 +1,22 @@
 Pós graduação em desenvolvimento full stack de sistemas modernos para nuvem -> Aula de introdução a arquitetura de aplicações web
 
+Resumo:
+
+Conhecimentos adquiridos: atribuições de um arquiteto de software, caracteristicas de arquitetura de desenvolvimento de um sistema e estilos de arquitetura.
+
+Criado uma aplicação MVP do zero onde a stack utilizada foi MERN (Mongo, Express, React, Node):
+- criado um Cluster no MongoDB;
+- realizado instalação e configuração do NodeJS;
+- o editor utilizado foi o Visual Studio;
+- utilizado o git para versionar o código que foi escrito;
+- instalado o Express como uma dependência;
+- configurado o drive de conexão do MongoDB;
+- realizado conexão com o Cluster do MongoBD;
+- instalado e configurado o React;
+- instalado o CORS como dependência;
+- realizado a conexão do frontend com o backend;
+- realizado conexão do backend com o banco de dados;
+
 **Atribuições de um arquiteto de software**
 
  - Tomar decisões de arquitetura;
@@ -113,18 +130,3 @@ Esta aplicação utiliza uma arquitetura em camadas, divida em: *Client, Server,
 **Server:** camada de servidor, camada de BackEnd, lógica de negócio, trabalhar com dados, ter regras de negócio e responável por conectar com o banco de dados.
 
 **Database:** camada de banco de dados.
-
-Resumo:
-
-Criado uma aplicação MVP do zero onde a stack utilizada foi MERN (Mongo, Express, React, Node):
-- criado um Cluster no MongoDB;
-- realizado instalação e configuração do NodeJS;
-- o editor utilizado foi o Visual Studio;
-- utilizado o git para versionar o código que foi escrito;
-- instalado o Express como uma dependência;
-- configurado o drive de conexão do MongoDB;
-- realizado conexão com o Cluster do MongoBD;
-- instalado e configurado o React;
-- instalado o CORS como dependência;
-- realizado a conexão do frontend com o backend;
-- realizado conexão do backend com o banco de dados;
